@@ -1,4 +1,13 @@
+//
+//  rankedListGenerator.cpp
+//  FOODIE_Project
+//
+//  Created by Isabel Dailey on 4/18/23.
+//
+
 #include "rankedListGenerator.h"
+#include <stdio.h>
+
 using namespace std;
 
 void FOODIE_BAGGER(int orderNumber){

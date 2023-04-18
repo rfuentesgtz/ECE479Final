@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  ItemSorter
+//  FOODIE_Project
 //
-//  Created by Isabel Dailey on 4/16/23.
+//  Created by Isabel Dailey on 4/18/23.
 //
 
 #include "rankedListGenerator.h"
