@@ -63,9 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				9C2533C529F0724B00A057CE /* stdc++.h */,
+				9C2533C229F0721400A057CE /* rankedListGenerator.h */,
 				9C2533B929F071D400A057CE /* main.cpp */,
 				9C2533C029F071F900A057CE /* rankedListGenerator.cpp */,
-				9C2533C229F0721400A057CE /* rankedListGenerator.h */,
 				9C2533C329F0722A00A057CE /* partA.cpp */,
 			);
 			path = FOODIE_Project2;
