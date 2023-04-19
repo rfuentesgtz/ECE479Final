@@ -18,14 +18,9 @@ int main(){
         cin >> yesNo;
         if(yesNo == "y"){ FOODIE_BAGGER(orderNumber++); }
     
-        cout << "Hope this works!" << endl;
-        // Hi
-        // HI2
-        // Hi3 
-        cout << "Part A here or separate program? " << endl;
-        
-        cout << "--------------------------------------" << endl;
         cout << "Continue? (y/n) ";
+        cout << "\n--------------------------------------" << endl;
+
         cin >> yesNo;
     } while(yesNo == "y");
 

@@ -8,9 +8,18 @@
 #define RANKEDLISTGENERATOR_H
 
 #include <iostream>
-#include <vector>
+#include "stdc++.h"
 #include <fstream>
+
 using namespace std;
+
+int bagPoints(int item, int itemQty);
+int numFreezerBag(vector<int> freezerBag);
+
+bool maxBagPointsFrozen(int totalBagPoints);
+bool maxBagCapacity(bool reachedMax, int totalPoints);
+
+vector<int> rule1(vector<int> frozen);
 
 void FOODIE_BAGGER(int orderNumber);
 
