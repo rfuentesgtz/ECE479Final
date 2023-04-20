@@ -63,14 +63,14 @@ bool maxBagPointsFrozen(int totalBagPoints){
 bool maxBagPointsNormal(int totalBagPoints){
     bool reachedMax = false;
     
-    if(totalBagPoints > 7){ reachedMax = true; }
+    if(totalBagPoints > 10){ reachedMax = true; }
     
     else{ reachedMax = false; }
     
     return reachedMax;
 }
 
-// Function to check if bag has reached its max capacity if totalBagPoints has not reached 6 or 7 (depending on if the items in order are frozen or normal)
+// Function to check if bag has reached its max capacity if totalBagPoints has not reached 7 or 9 (depending on if the items in order are frozen or normal)
 bool maxBagCapacity(bool reachedMax, int totalPoints){
     bool bagFull = false;
     if(reachedMax == true){ bagFull = true; }
