@@ -20,6 +20,7 @@ bool maxBagPointsFrozen(int totalBagPoints);
 bool maxBagCapacity(bool reachedMax, int totalPoints);
 
 vector<int> rule1(vector<int> frozen);
+vector<vector<int>> bagFrozenItems(int numFreezerBag, vector<int> freezerBag);
 
 void FOODIE_BAGGER(int orderNumber);
 

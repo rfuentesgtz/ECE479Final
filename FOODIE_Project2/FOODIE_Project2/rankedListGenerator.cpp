@@ -7,6 +7,7 @@
 
 #include "rankedListGenerator.h"
 #include <stdio.h>
+#include "stdc++.h"
 //#include "FreezerBag.h"
 
 typedef std::vector<int> vec_t;
@@ -104,6 +105,111 @@ int numFreezerBag(vector<int> freezerBag){
     return numFreezerBags;
 }
 
+// Function to split the items into the appropriate bags (frozen items)
+vector<vector<int>> bagFrozenItems(int numFreezerBags, vector<int> freezerBag){
+    vector<vector<int>> frozenBags;
+    vector<int> frozenBag1, frozenBag2, frozenBag3, frozenBag4;
+
+    // Medium Items
+    // Handling simple cases (1 bag case)
+    if(freezerBag.at(0) == 0){ frozenBag1.insert(frozenBag1.begin(), 0); }
+    if(freezerBag.at(0) == 1){ frozenBag1.insert(frozenBag1.begin(), 1); }
+    if(freezerBag.at(0) == 2){ frozenBag1.insert(frozenBag1.begin(), 2); }
+        
+    // If number of medium items is not 0, 1, or 2, then items need to carry over into next bag
+    switch(freezerBag.at(0)){
+            // 2 bag case
+        case 3:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 1);
+            break;
+        case 4:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 2);
+            break;
+            
+            // 3 bag case
+        case 5:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 2);
+            frozenBag3.insert(frozenBag3.begin(), 1);
+            break;
+        case 6:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 2);
+            frozenBag3.insert(frozenBag3.begin(), 2);
+            break;
+            
+            // 4 bag case
+        case 7:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 2);
+            frozenBag3.insert(frozenBag3.begin(), 2);
+            frozenBag3.insert(frozenBag4.begin(), 1);
+            break;
+            
+        case 8:
+            frozenBag1.insert(frozenBag1.begin(), 2);
+            frozenBag2.insert(frozenBag2.begin(), 2);
+            frozenBag3.insert(frozenBag3.begin(), 2);
+            frozenBag3.insert(frozenBag4.begin(), 2);
+            break;
+    }
+    
+    // Large Items
+    // Handling simple cases (1 bag case)
+    if(freezerBag.at(1) == 0){ frozenBag1.insert(frozenBag1.begin(), 0); }
+    if(freezerBag.at(1) == 1){ frozenBag1.insert(frozenBag1.begin(), 1); }
+    
+    // If number of large items is not 0, 1, or 2, then items need to carry over into next bag
+    if(freezerBag.at(1) == 2){ // 2 bag case
+        frozenBag1.insert(frozenBag1.begin() + 1, 1);
+        frozenBag2.insert(frozenBag2.begin() + 1, 1);
+    }
+    
+    if(freezerBag.at(1) == 3){ // 3 bag case
+        frozenBag1.insert(frozenBag1.begin() + 1, 1);
+        frozenBag2.insert(frozenBag2.begin() + 1, 1);
+        frozenBag3.insert(frozenBag3.begin() + 1, 1);
+    }
+    
+    if(freezerBag.at(0) == 4){ // 4 bag case
+        frozenBag1.insert(frozenBag1.begin() + 1, 1);
+        frozenBag2.insert(frozenBag2.begin() + 1, 1);
+        frozenBag3.insert(frozenBag3.begin() + 1, 1);
+        frozenBag3.insert(frozenBag4.begin() + 1, 1);
+    }
+    
+    cout << frozenBag1.at(0) << " " << frozenBag1.at(1) << endl;
+    cout << frozenBag2.at(0) << " " << frozenBag2.at(1) << endl;
+    cout << frozenBag3.at(0) << " " << frozenBag3.at(1) << endl;
+    cout << frozenBag4.at(0) << " " << frozenBag4.at(1) << endl;
+    
+    frozenBags.insert(frozenBags.begin() + 0, frozenBag1);
+    frozenBags.insert(frozenBags.begin() + 1, frozenBag2);
+    frozenBags.insert(frozenBags.begin() + 2, frozenBag3);
+    frozenBags.insert(frozenBags.begin() + 3, frozenBag4);
+    
+    if(numFreezerBags == 1){ frozenBags.insert(frozenBags.begin() + 0, frozenBag1); }
+    if(numFreezerBags == 2){
+        frozenBags.insert(frozenBags.begin() + 0, frozenBag1);
+        frozenBags.insert(frozenBags.begin() + 1, frozenBag2);
+    }
+    if(numFreezerBags == 3){
+        frozenBags.insert(frozenBags.begin() + 0, frozenBag1);
+        frozenBags.insert(frozenBags.begin() + 1, frozenBag2);
+        frozenBags.insert(frozenBags.begin() + 2, frozenBag3);
+    }
+    if(numFreezerBags == 4){
+        frozenBags.insert(frozenBags.begin() + 0, frozenBag1);
+        frozenBags.insert(frozenBags.begin() + 1, frozenBag2);
+        frozenBags.insert(frozenBags.begin() + 2, frozenBag3);
+        frozenBags.insert(frozenBags.begin() + 2, frozenBag3);
+    }
+    
+    return frozenBags;
+}
+
 void FOODIE_BAGGER(int orderNumber){
     int item;
     int itemQty = 0;
@@ -115,7 +221,7 @@ void FOODIE_BAGGER(int orderNumber){
     int numLargeItems = 0;
     vector<int> normalBag;
     vector<int> freezerBag;
-    vector<int> frozenBags;
+    vector<vector<int>> frozenBags;
     string keepGoing;
     vector<int> qty = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // Vector for food item quantities
     vector<int> frozen, normal, crushable; // Vectors for final values of certain items
@@ -220,10 +326,14 @@ void FOODIE_BAGGER(int orderNumber){
             freezerBag.at(0) = 8;
         }
         
+        else{ freezerBag.at(0) = freezerBag.at(0); }
+        
         if(freezerBag.at(1) > 4){
             cout << "Max number of large items reached" << endl;
             freezerBag.at(1) = 4;
         }
+        
+        else{ freezerBag.at(1) = freezerBag.at(1); }
         
         cout << "After Item Limit: " << freezerBag.at(0) << " " << freezerBag.at(1) << endl;
         
@@ -231,30 +341,18 @@ void FOODIE_BAGGER(int orderNumber){
         
         cout << "Freezer Bags Required: " << freezerBagCount << endl;
         
-        /// THIS PART NEEDS TO BE WORKED OUT/CODED LOGICALLY ///
-        /*for(int i = 0; i < freezerBagCount; i++){
-            if(freezerBagCount == 1 && freezerBag.at(0) != 0){
-                cout << "How Many Medium Items Would You Like Per Bag (1 or 2 Max)?: ";
-                cin >> numMediumItems;
-                frozenBags.insert(frozenBags.begin(), numMediumItems);
-            }
-            
-            if(freezerBagCount == 1 && freezerBag.at(1) != 0){
-                cout << "How Many Large Items Would You Like Per Bag (0 or 1 Max)?: ";
-                cin >> numLargeItems;
-                frozenBags.insert(frozenBags.begin() + 1, numLargeItems);
-            }
-            
-            cout << frozenBags.at(0) << " " << frozenBags.at(1);
-            
-        }*/
+        frozenBags = bagFrozenItems(freezerBagCount, freezerBag);
         
+        /*
+        cout << frozenBags.at(0) << endl;
+        cout << frozenBags.at(1) << endl;
+        cout << frozenBags.at(2) << endl;
+        cout << frozenBags.at(3) << endl;
+        */
         /*
         totalBagPoints = bagPoints(item, itemQty);
         cout << "Total Bag Points: " << totalBagPoints << endl;
         */
-        
-        cout << "";
         
         
     }
