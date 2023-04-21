@@ -48,22 +48,22 @@ int bagPoints(int item, int itemQty){
     return totalBagPoints;
 }
 
-// Function to check if totalBagPoints has exceeded bag point limit for the frozen food items (6 points max)
+// Function to check if totalBagPoints has exceeded bag point limit for the frozen food items (7 points max)
 bool maxBagPointsFrozen(int totalBagPoints){
     bool reachedMax = false;
     
-    if(totalBagPoints > 6){ reachedMax = true; }
+    if(totalBagPoints > 7){ reachedMax = true; }
     
     else{ reachedMax = false; }
     
     return reachedMax;
 }
 
-// Function to check if totalBagPoints has exceeded bag point limit for the normal food items (7 points max)
+// Function to check if totalBagPoints has exceeded bag point limit for the normal food items (9 points max)
 bool maxBagPointsNormal(int totalBagPoints){
     bool reachedMax = false;
     
-    if(totalBagPoints > 10){ reachedMax = true; }
+    if(totalBagPoints > 9){ reachedMax = true; }
     
     else{ reachedMax = false; }
     
