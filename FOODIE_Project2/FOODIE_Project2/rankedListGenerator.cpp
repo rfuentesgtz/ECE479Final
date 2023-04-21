@@ -227,7 +227,7 @@ void FOODIE_BAGGER(int orderNumber){
         
         cout << "After Item Limit: " << freezerBag.at(0) << " " << freezerBag.at(1) << endl;
         
-        freezerBagCount = numFreezerBag(freezerBag);
+        freezerBagCount = numFreezerBag(freezerBag); 
         
         cout << "Freezer Bags Required: " << freezerBagCount << endl;
         
