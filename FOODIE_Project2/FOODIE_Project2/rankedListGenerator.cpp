@@ -254,7 +254,7 @@ void FOODIE_BAGGER(int orderNumber){
         cout << "Total Bag Points: " << totalBagPoints << endl;
         */
         
-        
+        cout << "";
         
         
     }
