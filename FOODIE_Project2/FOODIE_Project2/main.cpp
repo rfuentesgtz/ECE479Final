@@ -18,10 +18,6 @@ int main(){
         cin >> yesNo;
         if(yesNo == "y"){ FOODIE_BAGGER(orderNumber++); }
     
-        cout << "Continue? (y/n) ";
-        cout << "\n--------------------------------------" << endl;
-
-        cin >> yesNo;
     } while(yesNo == "y");
 
     return 0;

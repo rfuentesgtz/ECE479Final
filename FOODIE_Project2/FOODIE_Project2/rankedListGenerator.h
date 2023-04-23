@@ -13,12 +13,6 @@
 
 using namespace std;
 
-int bagPoints(int item, int itemQty);
-int numFreezerBag(vector<int> freezerBag);
-
-bool maxBagPointsFrozen(int totalBagPoints);
-bool maxBagCapacity(bool reachedMax, int totalPoints);
-
 void FOODIE_BAGGER(int orderNumber);
 
 #endif

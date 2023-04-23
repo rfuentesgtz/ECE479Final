@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9C2533C129F071F900A057CE /* rankedListGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C2533C029F071F900A057CE /* rankedListGenerator.cpp */; };
 		9C2533C729F0745E00A057CE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C2533B929F071D400A057CE /* main.cpp */; };
-		9CA69BA329F1D3520081E7B7 /* FreezerBag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CA69BA229F1D3510081E7B7 /* FreezerBag.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,8 +30,6 @@
 		9C2533C229F0721400A057CE /* rankedListGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rankedListGenerator.h; sourceTree = "<group>"; };
 		9C2533C329F0722A00A057CE /* partA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = partA.cpp; sourceTree = "<group>"; };
 		9C2533C529F0724B00A057CE /* stdc++.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stdc++.h"; path = "../../stdc++.h"; sourceTree = "<group>"; };
-		9CA69BA129F1D3510081E7B7 /* FreezerBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreezerBag.h; sourceTree = "<group>"; };
-		9CA69BA229F1D3510081E7B7 /* FreezerBag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FreezerBag.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +66,6 @@
 				9C2533C529F0724B00A057CE /* stdc++.h */,
 				9C2533C029F071F900A057CE /* rankedListGenerator.cpp */,
 				9C2533C229F0721400A057CE /* rankedListGenerator.h */,
-				9CA69BA229F1D3510081E7B7 /* FreezerBag.cpp */,
-				9CA69BA129F1D3510081E7B7 /* FreezerBag.h */,
 				9C2533C329F0722A00A057CE /* partA.cpp */,
 			);
 			path = FOODIE_Project2;
@@ -134,7 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C2533C729F0745E00A057CE /* main.cpp in Sources */,
-				9CA69BA329F1D3520081E7B7 /* FreezerBag.cpp in Sources */,
 				9C2533C129F071F900A057CE /* rankedListGenerator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
