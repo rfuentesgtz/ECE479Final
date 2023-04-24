@@ -32,7 +32,7 @@ void FOODIE_BAGGER(int orderNumber){
     int numMediumFrozenItems = 0;
     int numMediumFrozenItemsRemaining = 0;
     bool tooMany = false;
-    string keepGoing;
+    string keepGoing, name, location;
     vector<int> frozen, normal, crushable; // Vectors for final values of certain items in an order
     vector<int> qty = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // Vector for food item quantities
     vector<string> mediumFrozenItems = {};
@@ -47,7 +47,10 @@ void FOODIE_BAGGER(int orderNumber){
     // Take the order(s) and adjust the order if person has entered in one or more amounts of items that cause the total number of bags to be greater than 6.
     do{
         tooMany = false;
-        
+        cout << "What is your name?: ";
+        cin >> name;
+        cout << "\nWhere do you want your ordered delivered?: ";
+        cin >> location;
         // Do this until the user has decided they don't want to add anymore items to their order
         do{
             cout << "\nOrder Number: " << orderNumber << endl;
@@ -277,6 +280,8 @@ void FOODIE_BAGGER(int orderNumber){
     cout << "Rule #11: Place all items into the determined bags" << endl << endl;
     cout << "\n################################################################ Order Summary ################################################################" << endl;
     cout << "Order #" << orderNumber << endl;
+    cout << "Name: " << name << endl;
+    cout << "Delivery Location: " << location << endl;
     cout << "Total Bags Needed: " << normalBagCount + frozenBagCount << " (" << normalBagCount << " Paper Bags and " << frozenBagCount << " Freezer Bags)" << endl;
     // Display Normal Bags
     if(normalBagCount == 0){ cout << "No Normal Items Ordered" << endl; }
