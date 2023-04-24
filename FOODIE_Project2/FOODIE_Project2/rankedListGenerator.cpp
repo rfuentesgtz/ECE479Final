@@ -162,6 +162,8 @@ void FOODIE_BAGGER(int orderNumber){
         // Resets the number of bags of each kind every time so that the number of bags is always 6 or less
         normalBagCount = 0;
         frozenBagCount = 0;
+        itemsInFrozenBag = {"", "", "", "", "", ""};
+        itemsInNormalBag = {"", "", "", "", "", ""};
 
         // Normal Bags:
         // Loop through sorting the various sized items into the appropriate number of paper bags in the correct order based on how many of each item of a category are left and by what rule applies
@@ -189,7 +191,7 @@ void FOODIE_BAGGER(int orderNumber){
                 spaceInNormalBag = spaceInNormalBag - 3;
                 
                 // Store the name of the large normal item planned on being put into a bag into a vector to be used for printing it later
-                itemsInNormalBag[normalBagCount] = "\n\t" + largeNormalItems.back() + itemsInNormalBag[normalBagCount];
+                itemsInNormalBag[normalBagCount] = "\n\t" + largeNormalItems.back() + " (Large Item)" + itemsInNormalBag[normalBagCount];
                 largeNormalItems.pop_back(); // Delete item from order list to move on to the large medium normal item in the order
             }
             // Loop while any medium normal items left and room in bag to fit each
@@ -200,7 +202,7 @@ void FOODIE_BAGGER(int orderNumber){
                 spaceInNormalBag = spaceInNormalBag - 2;
                 
                 // Store the name of the medium normal item planned on being put into a bag into a vector to be used for printing it later
-                itemsInNormalBag[normalBagCount] = "\n\t" + mediumNormalItems.back() + itemsInNormalBag[normalBagCount];
+                itemsInNormalBag[normalBagCount] = "\n\t" + mediumNormalItems.back() + " (Medium Item)" + itemsInNormalBag[normalBagCount];
                 mediumNormalItems.pop_back(); // Delete item from order list to move on to the next medium normal item in the order
             }
             // Loop while any small items are left and room in bag to fit each
@@ -211,7 +213,7 @@ void FOODIE_BAGGER(int orderNumber){
                 spaceInNormalBag = spaceInNormalBag - 2;
                 
                 // Store the name of the small item planned on being put into a bag into a vector to be used for printing it later
-                itemsInNormalBag[normalBagCount] = "\n\t" + smallItems.back() + itemsInNormalBag[normalBagCount];
+                itemsInNormalBag[normalBagCount] = "\n\t" + smallItems.back() + " (Small Item)" + itemsInNormalBag[normalBagCount];
                 smallItems.pop_back(); // Delete item from order list to move on to the next small item in the order
             }
             // Check if a crushable item was reserved to be put into a bag
@@ -219,7 +221,7 @@ void FOODIE_BAGGER(int orderNumber){
                 cout << "Rule #6: Plan to put crushable item " << crushableItems.back() << " on top of paper bag " << normalBagCount << endl;
                 
                 // Store the name of the crushable item planned on being put into a bag into a vector to be used for printing it later
-                itemsInNormalBag[normalBagCount] = "\n\t" + crushableItems.back() + itemsInNormalBag[normalBagCount];
+                itemsInNormalBag[normalBagCount] = "\n\t" + crushableItems.back() + " (Crushable Item)" + itemsInNormalBag[normalBagCount];
                 crushableItems.pop_back(); // Delete item from order list to move on to the next crushable item in the order
             }
             
@@ -248,7 +250,7 @@ void FOODIE_BAGGER(int orderNumber){
                 spaceInFreezerBag = spaceInFreezerBag - 3;
                 
                 // Store the name of the large frozen item planned on being put into a bag into a vector to be used for printing it later
-                itemsInFrozenBag[frozenBagCount] = "\n\t" + largeFrozenItems.back() + itemsInFrozenBag[frozenBagCount];
+                itemsInFrozenBag[frozenBagCount] = "\n\t" + largeFrozenItems.back() + " (Large Item)" + itemsInFrozenBag[frozenBagCount];
                 largeFrozenItems.pop_back(); // Delete item from order list to move on to the next large frozen item in the order
             }
             // Loop while any medium freezer items left and room in bag to fit each
@@ -259,7 +261,7 @@ void FOODIE_BAGGER(int orderNumber){
                 spaceInFreezerBag = spaceInFreezerBag - 2;
                 
                 // Store the name of the medium frozen item planned on being put into a bag into a vector to be used for printing it later
-                itemsInFrozenBag[frozenBagCount] = "\n\t" + mediumFrozenItems.back() + itemsInFrozenBag[frozenBagCount];
+                itemsInFrozenBag[frozenBagCount] = "\n\t" + mediumFrozenItems.back() + " (Medium Item)" + itemsInFrozenBag[frozenBagCount];
                 mediumFrozenItems.pop_back(); // Delete item from order list to move on to the next medium frozen item in the order
             }
             
@@ -272,6 +274,7 @@ void FOODIE_BAGGER(int orderNumber){
         } // end frozen bags while loop
     }while(tooMany == true); // end outermost do while
     
+    cout << "Rule #11: Place all items into the determined bags" << endl << endl;
     cout << "\n################################################################ Order Summary ################################################################" << endl;
     cout << "Order #" << orderNumber << endl;
     cout << "Total Bags Needed: " << normalBagCount + frozenBagCount << " (" << normalBagCount << " Paper Bags and " << frozenBagCount << " Freezer Bags)" << endl;
