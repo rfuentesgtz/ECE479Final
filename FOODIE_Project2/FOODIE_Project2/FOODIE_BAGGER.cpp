@@ -5,7 +5,7 @@
 //  Created by Isabel Dailey on 4/19/23.
 //
 
-#include "rankedListGenerator.h"
+#include "FOODIE_BAGGER.h"
 #include <stdio.h>
 #include "stdc++.h"
 //#include "FreezerBag.h"
@@ -49,7 +49,7 @@ void FOODIE_BAGGER(int orderNumber){
         tooMany = false;
         cout << "What is your name?: ";
         cin >> name;
-        cout << "\nWhere do you want your ordered delivered?: ";
+        cout << endl << "Where do you want your ordered delivered?: ";
         cin >> location;
         // Do this until the user has decided they don't want to add anymore items to their order
         do{
