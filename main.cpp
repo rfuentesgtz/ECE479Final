@@ -1,12 +1,13 @@
 //
 //  main.cpp
-//  FOODIE_Project
+//  FOODIE_Project2
 //
-//  Created by Isabel Dailey on 4/18/23.
+//  Created by Isabel Dailey on 4/19/23.
 //
 
-#include "rankedListGenerator.h"
+#include "FOODIE_BAGGER.h"
 #include "stdc++.h"
+using namespace std;
 
 int main(){
     int orderNumber = 1;
@@ -17,14 +18,6 @@ int main(){
         cin >> yesNo;
         if(yesNo == "y"){ FOODIE_BAGGER(orderNumber++); }
     
-        cout << "Hope this works!" << endl;
-        // Hi
-        // HI2
-        cout << "Part A here or separate program? " << endl;
-        
-        cout << "--------------------------------------" << endl;
-        cout << "Continue? (y/n) ";
-        cin >> yesNo;
     } while(yesNo == "y");
 
     return 0;
