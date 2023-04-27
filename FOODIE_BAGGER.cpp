@@ -49,7 +49,7 @@ void FOODIE_BAGGER(int orderNumber){
         tooMany = false;
         cout << "What is your name?: ";
         cin >> name;
-        cout << endl << "Where do you want your ordered delivered?: ";
+        cout << "Where do you want your ordered delivered?: ";
         cin >> location;
         // Do this until the user has decided they don't want to add anymore items to their order
         do{
