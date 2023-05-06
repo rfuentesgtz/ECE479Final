@@ -13,7 +13,7 @@
 using namespace std;
 
 void FOODIE_BAGGER(int orderNumber){
-    int item;
+    int item = 0;
     int itemQty = 0;
     int frozenBagCount = 0;
     int normalBagCount = 0;
@@ -45,12 +45,13 @@ void FOODIE_BAGGER(int orderNumber){
     vector<string> itemsInFrozenBag = {"", "", "", "", "", ""};
     
     // Take the order(s) and adjust the order if person has entered in one or more amounts of items that cause the total number of bags to be greater than 6.
+    item = 0;
+    cout << "What is your name?: ";
+    cin >> name;
+    cout << "Where do you want your ordered delivered?: ";
+    cin >> location;
     do{
         tooMany = false;
-        cout << "What is your name?: ";
-        cin >> name;
-        cout << "Where do you want your ordered delivered?: ";
-        cin >> location;
         // Do this until the user has decided they don't want to add anymore items to their order
         do{
             cout << "\nOrder Number: " << orderNumber << endl;
@@ -83,7 +84,6 @@ void FOODIE_BAGGER(int orderNumber){
             do {
                 cout << "How many of " << item << " would you like to add? ";
                 if (cin >> itemQty){ break; }
-                cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }while(true);
         
