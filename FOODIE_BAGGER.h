@@ -1,5 +1,5 @@
 //
-//  rankedListGenerator.h
+//  FOODIE_BAGGER.h
 //  FOODIE_Project2
 //
 //  Created by Isabel Dailey on 4/19/23.
