@@ -116,7 +116,7 @@ void dijkstra(int graph[NUM_LOCATIONS][NUM_LOCATIONS], int src, int output[NUM_L
     }
   
     // print the constructed distance array
-    printSolution(dist);
+    //printSolution(dist);
     //copy the results back to the main function
     for(int j = 0; j < NUM_LOCATIONS; j++){
             output[src][j] = dist[j];
