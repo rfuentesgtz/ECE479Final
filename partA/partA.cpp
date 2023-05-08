@@ -236,7 +236,7 @@ int main()
         printf("Destination 3: Science and Engineering Library\n");
         printf("Destination 4: Main Library\n");
         printf("Destination 5: Gittings Building\n\n");
-        printf("Type any other number to exit to exit the program\n");
+        printf("Type any other number besides 1-5 to exit to exit the program\n\n");
 
         for(int i = 0; i < numOrders; i++){
             unsigned int choice;
