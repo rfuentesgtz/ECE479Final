@@ -28,7 +28,6 @@
 		9C2533B929F071D400A057CE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9C2533C029F071F900A057CE /* FOODIE_BAGGER.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FOODIE_BAGGER.cpp; sourceTree = "<group>"; };
 		9C2533C229F0721400A057CE /* FOODIE_BAGGER.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FOODIE_BAGGER.h; sourceTree = "<group>"; };
-		9C2533C329F0722A00A057CE /* partA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = partA.cpp; sourceTree = "<group>"; };
 		9C2533C529F0724B00A057CE /* stdc++.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stdc++.h"; path = "../../stdc++.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +65,6 @@
 				9C2533C529F0724B00A057CE /* stdc++.h */,
 				9C2533C029F071F900A057CE /* FOODIE_BAGGER.cpp */,
 				9C2533C229F0721400A057CE /* FOODIE_BAGGER.h */,
-				9C2533C329F0722A00A057CE /* partA.cpp */,
 			);
 			path = FOODIE_Project2;
 			sourceTree = "<group>";
